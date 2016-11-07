@@ -1,19 +1,47 @@
 <!--logs.wxml-->
 <view class="container log-list">
 
+<view class="titleview">
+  <text class="title">{{city}}</text>
+  <text class="details">{{fengli}}</text>
+</view>
+
   <view class="today-list">
-    <view class="today-list-item">
-        <text>text</text>
-        <image></image>
-        <text>text</text>
-    </view>
+    <template>
+      <view class="today-list-item">
+          <text>text</text>
+          <image></image>
+          <text>text</text>
+      </view>
+    </template>
   </view>
 
   <view class="future-list">
+  <template name="forecast">
+      <view class="item">
+          <text class="front">{{week}}</text>
+          <image></image>
+          <text class="bihind">{{hightemp}}   {{lowtemp}}</text>
+      </view>
+    </template>
+
+    <block wx:for="{{forecast}}" wx:key="*this">
+      <template is="forecast" data="{{...item}}"></template>
+    </block>
+    
+  </view>
+
+    <view class="intro">
+    <block wx:for="{{intro}}">
+      <text>{{item.name}}: {{item.details}}</text>
+    </block>
+    </view>
+
+
+  <view class="weather-details">
     <view class="item">
-        <text class="front">text</text>
-        <image></image>
-        <text class="bihind">text</text>
+      <text class="first">Sunrise:</text>
+      <text class="second">06.13</text>
     </view>
   </view>
 
