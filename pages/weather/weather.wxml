@@ -1,0 +1,21 @@
+<!--logs.wxml-->
+<view class="container log-list">
+
+  <view class="today-list">
+    <view class="today-list-item">
+        <text>text</text>
+        <image></image>
+        <text>text</text>
+    </view>
+  </view>
+
+  <view class="future-list">
+    <view class="item">
+        <text class="front">text</text>
+        <image></image>
+        <text class="bihind">text</text>
+    </view>
+  </view>
+
+
+</view>

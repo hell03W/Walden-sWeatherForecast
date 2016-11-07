@@ -1,0 +1,75 @@
+.log-list {
+  display: flex;
+  flex-direction: column;
+  padding: 40rpx;
+}
+.container{
+    background-color: lightcoral;
+}
+
+/*展示今天一天不同时段的天气情况*/
+.today-list{
+    background-color: lightgray;
+    width: 100%;
+    
+}
+.today-list-item{
+  background-color: green;
+  height: 150rpx;
+  width: 75rpx;
+  float: left;
+  margin: 10rpx 10rpx;
+  font-size: 25rpx;
+}
+.today-list-item text{
+    text-align: center;
+    line-height: 45rpx;
+    background-color: lightblue;
+    color: white;
+    display: block;
+    width: 100%;
+    height: 45rpx;
+
+}
+.today-list-item image{
+    width: 100%;
+    height: 40%;
+}
+
+
+/*展示未来几天基本的天气情况*/
+.future-list{
+    background-color: lightcyan;
+    width: 100%;
+    height: 300px;
+    margin-top: 10px;
+    padding: 10px 0px;
+    color: white;
+}
+.future-list .item{
+    background-color: lightgray;
+    width: 100%;
+    height: 40px;
+    font-size: 15px;
+    float: left;
+    display: block;
+}
+.future-list image{
+    width: 30%;
+    height: 40px;
+    background-color: green;
+}
+.future-list text{
+    width: 35%;
+    height: 40px;
+    background-color: lightgreen;
+    line-height: 40px;
+}
+.future-list .front{
+    float: left;
+}
+.future-list .bihind{
+    float: right;
+    text-align: right;
+}
+
