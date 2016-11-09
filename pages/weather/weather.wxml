@@ -32,17 +32,23 @@
   </view>
 
     <view class="intro">
-    <block wx:for="{{intro}}">
+    <block wx:for="{{intro}}" wx:key="{{index}}">
       <text>{{item.name}}: {{item.details}}</text>
     </block>
     </view>
 
 
+    <template name="weather-details">
+      <view class="weather-item">
+        <text class="first">{{title}}:</text>
+        <text class="second">{{detail}}</text>
+      </view>
+    </template>
+
   <view class="weather-details">
-    <view class="item">
-      <text class="first">Sunrise:</text>
-      <text class="second">06.13</text>
-    </view>
+    <block wx:for="{{weatherdetails}}" wx:key="*this">
+      <template is="weather-details" data="{{...item}}"></template>
+    </block>
   </view>
 
 

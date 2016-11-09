@@ -39,12 +39,21 @@ Page({
           },
           method:"GET",
           success: function (res) {
-            var weatherInfo = res.data.retData;
+            var weatherInfo = res.data.retData
+            var today = weatherInfo.today
+            console.log(today)
             that.setData({
               city: weatherInfo.city,
               fengli: weatherInfo.today.fengli,
               forecast: weatherInfo.forecast,
-              intro: weatherInfo.today.index,
+              intro: today.index,
+              weatherdetails: [{title: '日期', detail: today.date},
+                              {title: '平均温度', detail: today.curTemp},
+                              {title: '风向', detail: today.fengxiang},
+                              {title: '风力', detail: today.fengli},
+                              {title: '最高温度', detail: today.hightemp},
+                              {title: '最低温度', detail: today.lowtemp},
+                              {title: '类型', detail: today.type}],
             })
           },
           fail: function (err) {

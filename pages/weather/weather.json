@@ -1,3 +1,5 @@
 {
-    "navigationBarTitleText": "walden的天气预报"
+    "navigationBarTitleText": "walden的天气预报",
+    "navigationBarBackgroundColor": "#d3d3d3",
+    "navigationBarTextStyle": "white"
 }

@@ -97,6 +97,7 @@
     font-size: 15px;
     display: block;
     line-height: 20px;
+    padding: 5px 0px;
 }
 
 
@@ -106,24 +107,21 @@
     width: 100%;
     height: auto;
     padding: 15px 0px;
-    background-color: lightskyblue;
 }
-.weather-details .item{
-    background-color: lightpink;
-    padding: 10px 0px;
-    color: white;
-}
-.weather-details .item .first{
+.weather-details .weather-item .first{
     width: 50%;
     height: auto;
     float: left;
     text-align: right;
-    background-color: palegreen;
+    line-height: 30px;
 } 
-.weather-details .item .second{
-    background-color: lightcyan;
+.weather-details .weather-item .second{
     width: 50%;
     float: left;
+    line-height: 30px;
+}
+.weather-item{
+    color: white;
 }
 
 
